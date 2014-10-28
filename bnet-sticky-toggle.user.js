@@ -2,7 +2,7 @@
 // @name          Battle.net Sticky Thread Toggle
 // @namespace     https://github.com/Kanegasi/bnet-sticky-toggle
 // @description   Hides sticky threads in all Battle.net forums with toggle button
-// @version       1.3
+// @version       1.4
 // @downloadURL   https://github.com/Kanegasi/bnet-sticky-toggle/raw/master/bnet-sticky-toggle.user.js
 // @updateURL     https://github.com/Kanegasi/bnet-sticky-toggle/raw/master/bnet-sticky-toggle.meta.js
 // @include       /^https?://(\w+\.)?battle\.net/(\w+/)?\w+/forum/\d+/.*?$/
@@ -10,7 +10,7 @@
 // @icon          http://i.imgur.com/uWVXKdv.png
 // ==/UserScript==
 
-$('.stickied-topics').attr({ style: 'visibility:collapse' });
+$('.stickied-topic').attr({ style: 'visibility:collapse' });
 
 $('.service-shop').before(
     $('<li class="service-cell stickytoggle" id="stickyhidden"></li>').html(
