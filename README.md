@@ -10,7 +10,7 @@ You need [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/d
 
 #### The MIT License (MIT)
 
-Copyright (c) 2014 Kanegasi
+Copyright (c) 2014,2015 Kanegasi
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
