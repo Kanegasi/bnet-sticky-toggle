@@ -2,7 +2,7 @@
 // @name          Battle.net Sticky Thread Toggle
 // @namespace     https://github.com/Kanegasi/bnet-sticky-toggle
 // @description   Hides sticky threads in all Battle.net forums with toggle button
-// @version       1.4
+// @version       1.5
 // @downloadURL   https://github.com/Kanegasi/bnet-sticky-toggle/raw/master/bnet-sticky-toggle.user.js
 // @updateURL     https://github.com/Kanegasi/bnet-sticky-toggle/raw/master/bnet-sticky-toggle.meta.js
 // @include       /^https?://(\w+\.)?battle\.net/(\w+/)?\w+/forum/\d+/.*?$/
@@ -12,23 +12,40 @@
 
 $('.stickied-topic').attr({ style: 'visibility:collapse' });
 
+$('#nav-client-main-menu').append('<li class="stickytoggle-new" id="stickyhidden"><a class="nav-item nav-link needsclick">Show Stickies</a></li>');
+
+$('.stickytoggle-new').click(function() {
+ var stickystatus = document.getElementById("stickyhidden");
+ if (stickystatus) {
+  $('.stickytoggle-new').attr({ id: 'stickyshown' }).html(
+  $('<a class="nav-item nav-link needsclick">Hide Stickies</a>')
+  );
+  $('.stickied-topic').attr({ style: 'visibility:visible' });
+ } else {
+  $('.stickytoggle-new').attr({ id: 'stickyhidden' }).html(
+  $('<a class="nav-item nav-link needsclick">Show Stickies</a>')
+  );
+  $('.stickied-topic').attr({ style: 'visibility:collapse' });
+ }
+});
+
 $('.service-shop').before(
-    $('<li class="service-cell stickytoggle" id="stickyhidden"></li>').html(
-        $('<a class="service-link" style="cursor:pointer">Show Stickies</a>')
-    )
+$('<li class="service-cell stickytoggle-old" id="stickyhidden"></li>').html(
+$('<a class="service-link" style="cursor:pointer">Show Stickies</a>')
+)
 );
 
-$('.stickytoggle').click(function() {
-    var stickystatus = document.getElementById("stickyhidden");
-    if (stickystatus) {
-        $('.stickytoggle').attr({ id: 'stickyshown' }).html(
-            $('<a class="service-link" style="cursor:pointer">Hide Stickies</a>')
-        );
-        $('.stickied-topic').attr({ style: 'visibility:visible' });
-    } else {
-        $('.stickytoggle').attr({ id: 'stickyhidden' }).html(
-            $('<a class="service-link" style="cursor:pointer">Show Stickies</a>')
-        );
-        $('.stickied-topic').attr({ style: 'visibility:collapse' });
-    }
+$('.stickytoggle-old').click(function() {
+ var stickystatus = document.getElementById("stickyhidden");
+ if (stickystatus) {
+  $('.stickytoggle-old').attr({ id: 'stickyshown' }).html(
+  $('<a class="service-link" style="cursor:pointer">Hide Stickies</a>')
+  );
+  $('.stickied-topic').attr({ style: 'visibility:visible' });
+ } else {
+  $('.stickytoggle-old').attr({ id: 'stickyhidden' }).html(
+  $('<a class="service-link" style="cursor:pointer">Show Stickies</a>')
+  );
+  $('.stickied-topic').attr({ style: 'visibility:collapse' });
+ }
 });
