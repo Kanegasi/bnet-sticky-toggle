@@ -39,12 +39,12 @@ $('.stickytoggle-old').click(function() {
  var stickystatus = document.getElementById("stickyhidden");
  if (stickystatus) {
   $('.stickytoggle-old').attr({ id: 'stickyshown' }).html(
-  $('<a class="service-link" style="cursor:pointer">Hide Stickies</a>')
+  $('<a class="service-link">Hide Stickies</a>')
   );
   $('.stickied-topic').attr({ style: 'visibility:visible' });
  } else {
   $('.stickytoggle-old').attr({ id: 'stickyhidden' }).html(
-  $('<a class="service-link" style="cursor:pointer">Show Stickies</a>')
+  $('<a class="service-link">Show Stickies</a>')
   );
   $('.stickied-topic').attr({ style: 'visibility:collapse' });
  }
