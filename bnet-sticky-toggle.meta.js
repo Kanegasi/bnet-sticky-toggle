@@ -7,6 +7,6 @@
 // @icon          http://i.imgur.com/uWVXKdv.png
 // @updateURL     https://github.com/Kanegasi/bnet-sticky-toggle/raw/master/bnet-sticky-toggle.meta.js
 // @downloadURL   https://github.com/Kanegasi/bnet-sticky-toggle/raw/master/bnet-sticky-toggle.user.js
-// @match         /^https?://\w+\.forums\.blizzard\.com/\w+/wow/c/.*?/\d+/?$/
+// @match         /^https?:\/\/\w+\.forums\.blizzard\.com/\w+/wow/c/.*?/\d+/?$/
 // @grant         none
 // ==/UserScript==
