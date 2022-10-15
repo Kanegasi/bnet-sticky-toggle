@@ -1,7 +1,6 @@
-### Hides sticky threads in all Battle.net forums with toggle button
+### Hides sticky threads in all blizzard.com forums with toggle button
 
-![](http://i.imgur.com/30LT7AB.gif)
-![](http://i.imgur.com/I74SteB.gif)
+![](https://i.imgur.com/egjWoPo.gif)
 
 #### This is a userscript
 You need [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) for Chrome or [Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/) for Firefox
