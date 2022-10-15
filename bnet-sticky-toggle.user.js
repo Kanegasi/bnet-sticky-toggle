@@ -1,10 +1,10 @@
 /* globals jQuery, $, waitForKeyElements */
 // ==UserScript==
-// @name         Battle.net Sticky Thread Toggle
+// @name         Blizzard.com Pinned Thread Toggle
 // @namespace    https://github.com/Kanegasi/bnet-sticky-toggle
-// @version      2.16
+// @version      2.17
 // @author       Kanegasi
-// @description  Hides sticky threads in all Battle.net forums with toggle button
+// @description  Hides pinned threads in all Blizzard.com forums with toggle button
 // @icon         http://i.imgur.com/uWVXKdv.png
 // @updateURL    https://github.com/Kanegasi/bnet-sticky-toggle/raw/master/bnet-sticky-toggle.meta.js
 // @downloadURL  https://github.com/Kanegasi/bnet-sticky-toggle/raw/master/bnet-sticky-toggle.user.js
@@ -16,21 +16,21 @@
 $(document).ready(function () {
 
   $(".Navbar-items").append(
-    $('<a class="Navbar-item Navbar-link is-noSelect Navbar-stickytoggle stickytoggle" id="stickyhidden" data-index="4" data-name="stickytoggle" tabindex="0" data-analytics="global-nav" data-analytics-placement="Nav - StickyToggle"></a>').html(
-      $('<div class="Navbar-label">Show Stickies</div>')
+    $('<a class="Navbar-item Navbar-link is-noSelect Navbar-pintoggle pintoggle" id="pinhidden" data-index="4" data-name="pintoggle" tabindex="0" data-analytics="global-nav" data-analytics-placement="Nav - PinToggle"></a>').html(
+      $('<div class="Navbar-label">Show Pins</div>')
     )
   );
 
-  $(".stickytoggle").click(function() {
-    var stickystatus = document.getElementById("stickyhidden");
-    if (stickystatus) {
-      $(".stickytoggle").attr({ id: "stickyshown" }).html(
-        $('<div class="Navbar-label">Hide Stickies</div>')
+  $(".pintoggle").click(function() {
+    var pinstatus = document.getElementById("pinhidden");
+    if (pinstatus) {
+      $(".pintoggle").attr({ id: "pinshown" }).html(
+        $('<div class="Navbar-label">Hide Pins</div>')
       );
       $(".pinned").attr({ style: "visibility:visible" });
     } else {
-      $(".stickytoggle").attr({ id: "stickyhidden" }).html(
-        $('<div class="Navbar-label">Show Stickies</div>')
+      $(".pintoggle").attr({ id: "pinhidden" }).html(
+        $('<div class="Navbar-label">Show Pins</div>')
       );
       $(".pinned").attr({ style: "visibility:collapse" });
     }
@@ -47,8 +47,8 @@ $(document).ready(function () {
     });
   }
   $("body").classChange((el, newClass) => {
-    var stickystatus = document.getElementById("stickyhidden");
-    if (stickystatus) {
+    var pinstatus = document.getElementById("pinhidden");
+    if (pinstatus) {
       $(".pinned").attr({ style: "visibility:collapse" });
     } else {
       $(".pinned").attr({ style: "visibility:visible" });

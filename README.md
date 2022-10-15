@@ -1,4 +1,4 @@
-### Hides sticky threads in all blizzard.com forums with toggle button
+### Hides pinned threads in all Blizzard.com forums with toggle button
 
 ![](https://i.imgur.com/egjWoPo.gif)
 
